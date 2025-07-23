@@ -1,77 +1,100 @@
-# Chatbot Component Documentation
+# Chatbot 2.0
 
-## Overview
-The Chatbot component is a React-based AI assistant that provides real-time chat functionality with a smooth user experience. It features animated message transitions, a sidebar for chat history, and a typing indicator with a delay for bot responses.
+  
+
+The Chatbot 2.0 is a conversational AI tool designed to interact with users, answer questions, and slove mathematics. It provides a user-friendly interface for seamless communication and is built to handle basic conversational flows.
+
+  
 
 ## Features
-- Real-time chat interface
-- Animated chat messages using Framer Motion
-- Typing indicator with animation
-- Sidebar for chat history
-- Smooth scrolling behavior
-- Responsive design
 
-## Dependencies
-- React
-- Framer Motion (for animations)
-- React Icons (for UI icons)
-- Zustand (for state management)
+-  **Text-Based Interaction**: Responds to user input with relevant text replies.
 
-## Component Breakdown
+-  **Predefined Commands**: Supports specific commands for tasks like greetings, help, and information retrieval.
 
-### State Variables
-- `input`: Stores the user input.
-- `messages`: Stores chat messages (retrieved from Zustand store).
-- `chatHistory`: Stores chat history extracted from previous user messages.
-- `isTyping`: Boolean indicating whether the bot is typing.
-- `isSidebarOpen`: Controls the visibility of the sidebar.
-- `isLoading`: Prevents multiple submissions while waiting for a bot response.
+-  **Context Awareness**: Maintains basic conversation context for coherent interactions.
 
-### Hooks Used
-- `useState`: Manages local states.
-- `useRef`: References the chat container for auto-scrolling.
-- `useEffect`: Updates chat history and auto-scrolls the chat view.
+-  **Extensibility**: Can be extended with additional features or integrated with external APIs.
+ 
+ -  **Mathematic**:  Chatbot 2.0 able to slove mathematic questions.
 
-### Functions
-#### `handleSubmit(e)`
-Handles message submission:
-1. Prevents default form submission.
-2. Checks if the input is valid.
-3. Adds the user message to the chat.
-4. Displays the bot typing animation.
-5. Fetches the bot response with a delay (1500ms).
-6. Updates the chat and hides the typing indicator.
+  
 
-#### `useEffect` Hook for Auto-Scrolling
-Ensures that the chat view scrolls to the bottom when new messages arrive.
+## Getting Started
 
-#### `useEffect` Hook for Chat History
-Extracts user messages and stores them in `chatHistory`.
+  
 
-### UI Breakdown
-#### Chat History Sidebar
-- Displays a list of past user messages.
-- Can be toggled open/closed.
-- Uses Framer Motion for smooth slide-in/out animations.
+### Installation
 
-#### Chat Messages
-- Displayed as bubbles (user messages are blue, bot messages are gray).
-- Animated using Framer Motion.
-- Typing indicator mimics a bot response delay.
+1.  **Clone repository**: 
+```bash
 
-#### Input Field & Send Button
-- Users can type messages and send them via a button.
-- Input is disabled when the bot is processing a response.
+git clone https://github.com/mahmud-r-farhan/chatbot.ai
 
-## CSS Animations
-- **Typing Animation**: Simulates dots appearing while the bot is typing.
-- **Chat Bubble Effects**: Smooth fade-in and slide-up animations.
-- **Sidebar Transitions**: Uses Framer Motion for fluid motion effects.
+```
 
-## Future Enhancements
-- Improve bot response handling with an API backend.
-- Add persistent chat history using local storage or a database.
-- Support multiple chat sessions.
-- Integrate speech-to-text or voice recognition features.
+2.  **Install Dependencies**: 
+- npm. yarn, bun or pnpm
+ ```bash
+ 
+ npm install
+ 
+ ```
 
-This documentation serves as a guide to understanding and extending the chatbot component. Happy coding!
+3.  **Run or Build**: 
+- Development Server
+```bash
+
+npm run dev
+
+```
+- Build
+```bash
+
+npm run build
+
+```
+
+## Usage
+
+  
+
+### Basic Interaction
+
+-  **Start a Conversation**: Type a message to initiate interaction.
+
+-  **Commands**: Use predefined commands to trigger specific responses. Examples:
+
+-  `hello`: Returns a greeting.
+
+-  `help`: Lists available commands.
+
+-  `info`: Provides details about the chatbot.
+
+  
+
+
+
+## Customization
+
+-  **Add Commands**: Modify the command handler (e.g., `commands.js` or `commands.py`) to include new commands and responses.
+
+-  **Change Responses**: Update the response templates in the configuration or response files.
+
+-  **Integrate APIs**: Connect the chatbot to external APIs for advanced functionality (e.g., weather data, news updates).
+
+
+## Limitations
+
+- The chatbot may not handle complex conversational contexts without additional configuration.
+
+- Limited to text-based input/output unless extended with multimedia support.
+
+- Requires manual updates to sets or improve response accuracy.
+
+  
+  
+
+## Support
+
+> [Github](https://github.com/mahmud-r-farhan/chatbot.ai/issues)
